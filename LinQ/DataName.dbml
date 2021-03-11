@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="students" Class="DataNameDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=DESKTOP-CJ9UDHF\SQLEXPRESS01;Initial Catalog=students;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="studentsConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.persona" Member="persona">
+    <Type Name="persona">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NChar(30)" CanBeNull="true" />
+      <Column Name="email" Type="System.String" DbType="NChar(30)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.GetPersonas" Method="GetPersonas">
+    <ElementType Name="GetPersonasResult">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NChar(30)" CanBeNull="true" />
+      <Column Name="email" Type="System.String" DbType="NChar(30)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>
